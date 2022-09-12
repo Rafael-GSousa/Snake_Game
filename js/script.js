@@ -12,6 +12,8 @@ let food = {
     y: Math.floor(Math.random() * 15 + 1) * box
 }
 
+let pontos = 0;
+
 
 function criarBG(){
     context.fillStyle = "black";
@@ -22,6 +24,8 @@ function criarCobrinha(){
     for(i = 0; i < snake.length; i++){
         context.fillStyle = "white";
         context.fillRect(snake[i].x, snake[i].y, box, box);
+        pontos = i;
+
     }
 
 }
@@ -52,6 +56,7 @@ function iniciarJogo(){
         if(snake[0].x == snake[i].x && snake[0].y == snake[i].y){
             clearInterval(jogo);
             alert("Game Over! ='(");
+            alert("Sua pontuação ==> " + pontos + " pontos");
         }
     }
 
