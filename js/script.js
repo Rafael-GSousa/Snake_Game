@@ -57,6 +57,7 @@ function iniciarJogo(){
             clearInterval(jogo);
             alert("Game Over! ='(");
             alert("Sua pontuação ==> " + pontos + " pontos");
+            location.reload()
         }
     }
 
