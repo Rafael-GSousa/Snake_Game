@@ -34,3 +34,28 @@ button {
 button:hover {
     background-color: #2980b9;
 }
+
+/* Estilos padrão */
+/* ... (seus estilos existentes) ... */
+
+/* Estilos para telas menores, como smartphones */
+@media (max-width: 767px) {
+    #container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    #snake {
+        border: 1px solid white;
+    }
+
+    button {
+        font-size: 18px;
+        width: 30px;
+        height: 30px;
+        margin: 3px;
+    }
+}
