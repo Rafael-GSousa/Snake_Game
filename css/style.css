@@ -8,8 +8,65 @@ body{
     color: blue;
 }
 
+#botoes {
+    display: none;
+}
+
+
+
 @media screen and (max-width: 700px) {
     #snake {
         width: 90%;
+    }
+
+    #botoes {
+        display: block;
+    }
+
+        /* Estilize os botões */
+    button {
+        background-color: lightgrey;
+        color: white;
+        font-size: 24px;
+        width: 60px;
+        height: 60px;
+        border: none;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    /* Estilize os botões com setas usando pseudo-elementos */
+    button::before {
+        content: "";
+        width: 0;
+        height: 0;
+        display: inline-block;
+        position: relative;
+        top: -2px;
+        margin-right: 5px;
+    }
+
+    /* Estilize os botões de seta para cima */
+    #up::before {
+        border: 15px solid transparent;
+        border-bottom: 15px solid black;
+    }
+
+    /* Estilize os botões de seta para a esquerda */
+    #left::before {
+        border: 15px solid transparent;
+        border-right: 15px solid black;
+    }
+
+    /* Estilize os botões de seta para a direita */
+    #right::before {
+        border: 15px solid transparent;
+        border-left: 15px solid black;
+    }
+
+    /* Estilize os botões de seta para baixo */
+    #down::before {
+        border: 15px solid transparent;
+        border-top: 15px solid black;
     }
 }

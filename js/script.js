@@ -92,5 +92,35 @@ function iniciarJogo(){
 
 }
 
+// ...
+
+// Event listeners para os botões
+document.getElementById("up").addEventListener("click", () => {
+    if (direction !== "down") {
+        direction = "up";
+    }
+});
+
+document.getElementById("left").addEventListener("click", () => {
+    if (direction !== "right") {
+        direction = "left";
+    }
+});
+
+document.getElementById("right").addEventListener("click", () => {
+    if (direction !== "left") {
+        direction = "right";
+    }
+});
+
+document.getElementById("down").addEventListener("click", () => {
+    if (direction !== "up") {
+        direction = "down";
+    }
+});
+
+// ...
+
+
 let jogo = setInterval(iniciarJogo, 100);
 
